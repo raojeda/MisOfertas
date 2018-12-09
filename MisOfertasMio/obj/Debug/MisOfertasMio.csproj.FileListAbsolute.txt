@@ -1,0 +1,58 @@
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll.config
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.pdb
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csprojResolveAssemblyReference.cache
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csproj.CoreCompileInputs.cache
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.dll
+C:\Users\vina\Desktop\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.pdb
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll.config
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.pdb
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csprojResolveAssemblyReference.cache
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csproj.CoreCompileInputs.cache
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.dll
+D:\8 semestre\PORTAFOLIO\2 iteracion\paginas prueba\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll.config
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\EntityFramework.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.dll.config
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.dll.config
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\EntityFramework.xml
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csprojAssemblyReference.cache
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csproj.CoreCompileInputs.cache
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csproj.CopyComplete
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Oracle.ManagedDataAccess.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll.config
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\MisOfertasMio.pdb
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\EntityFramework.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Oracle.ManagedDataAccess.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.pdb
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\DALCmisofertas.dll.config
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.pdb
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Negocio.dll.config
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\EntityFramework.xml
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csprojResolveAssemblyReference.cache
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.csproj.CoreCompileInputs.cache
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.dll
+C:\Users\vina\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\obj\Debug\MisOfertasMio.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\Oracle.DataAccess.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\itextsharp.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\MisOfertasMio\bin\itextsharp.xml

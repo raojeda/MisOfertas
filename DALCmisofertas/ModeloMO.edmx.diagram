@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1e56864338a44de489db40a2c09d2a82" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="ModelMO.ADMINISTRADOR" Width="1.5" PointX="10.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.CATEGORIA" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.COMUNA" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.CONSUMIDOR" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.ENCARGADO" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.EVALUACION" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.GERENTE" Width="1.5" PointX="7.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.MARCA" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.OFERTA" Width="1.5" PointX="5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.PRODUCTO" Width="1.5" PointX="7.625" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.REGION" Width="1.5" PointX="1.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.RETAIL" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.SUCURSAL" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelMO.VALORACION" Width="1.5" PointX="10.5" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="ModelMO.PRODUCTO_CATEGORIA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.COMUNA_REGION_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.CONSUMIDOR_COMUNA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.SUCURSAL_COMUNA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.VALORACION_CONSUMIDOR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.ENCARGADO_RETAIL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.OFERTA_ENCARGADO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.VALORACION_EVALUACION_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.PRODUCTO_MARCA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.VALORACION_OFERTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.SUCURSAL_RETAIL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelMO.OFERTA_ID_FK" />
+        <EntityTypeShape EntityType="ModelMO.COMPORTAMIENTO_BI" Width="1.5" PointX="13.5" PointY="4.125" />
+        <AssociationConnector Association="ModelMO.IDOFERTA_FK" />
+        <AssociationConnector Association="ModelMO.RUTCONSUMIDOR_FK" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

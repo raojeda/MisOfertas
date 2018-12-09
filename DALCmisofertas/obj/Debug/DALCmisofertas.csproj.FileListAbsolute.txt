@@ -1,0 +1,10 @@
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\bin\Debug\DALCmisofertas.dll.config
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\bin\Debug\DALCmisofertas.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\bin\Debug\DALCmisofertas.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\bin\Debug\EntityFramework.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\bin\Debug\EntityFramework.xml
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\obj\Debug\DALCmisofertas.csproj.CoreCompileInputs.cache
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\obj\Debug\DALCmisofertas.csproj.CopyComplete
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\obj\Debug\DALCmisofertas.dll
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\obj\Debug\DALCmisofertas.pdb
+C:\Users\Raul\Documents\Visual Studio 2017\MisOfertasMio\DALCmisofertas\obj\Debug\DALCmisofertas.csprojAssemblyReference.cache

@@ -1,0 +1,21 @@
+﻿body {
+    background-image: url("../Imagen/Background-Login.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color:whitesmoke;
+    opacity:0.95;
+}
+
+form {
+    margin: auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.80);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+}

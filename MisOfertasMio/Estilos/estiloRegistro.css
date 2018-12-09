@@ -1,0 +1,191 @@
+﻿body {
+    background-image: url("../Imagen/Background-Login.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+form {
+    margin: auto;
+    width: 100%;
+    max-width: 768px;
+    padding: 35px;
+    background-color: rgba(255, 255, 255, 0.80);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: rgba(0,0,0,0.5);
+}
+
+.Milbl {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top:20px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+}
+
+.MiSuscribir {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+    margin:auto;
+}
+
+.MiFile {
+    margin: auto;
+    width: 90%;
+    border: 3px solid rgba(0,0,0,0.2);
+    border-radius: 25px;
+    opacity: 0.9;
+}
+
+.MiComentario {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+    width: 90%;
+}
+
+.Milbl[id="lblEscala"] {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+}
+
+.Milbl[id="lblSuscrito"] {
+    display: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+}
+
+.MiDDL {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: rgba(0,0,0,0.7);
+    width: 100%;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    margin: auto;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+    input[type="submit"] {
+        background: linear-gradient(#107987, #156193);
+        border: 0;
+        color: azure;
+        opacity: 0.8;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    input[id="btnVolver"] {
+        background: linear-gradient(#4e4e4e, #444444);
+    }
+
+    input[type="submit"]:hover {
+        opacity: 1;
+    }
+
+    input[type="submit"]:active {
+        transform: scale(0.97);
+    }
+
+@media (max-width:768px) {
+    form {
+        width: 75%;
+    }
+}
+
+@media (max-width:480px) {
+    form {
+        width: 95%;
+    }
+}
+
+.btnVolver {
+    background: linear-gradient(#4e4e4e, #444444);
+    border: 0;
+    color: azure;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+    width: 90%;
+}
+
+    .btnVolver:hover {
+        opacity: 1;
+    }
+
+    .btnVolver:active {
+        transform: scale(0.97);
+    }
+
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+}
+
+    .material-switch > label::before {
+        background: rgb(0, 0, 0);
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        content: '';
+        height: 16px;
+        margin-top: -8px;
+        position: absolute;
+        opacity: 0.3;
+        transition: all 0.4s ease-in-out;
+        width: 40px;
+    }
+
+    .material-switch > label::after {
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        content: '';
+        height: 24px;
+        left: -4px;
+        margin-top: -8px;
+        position: absolute;
+        top: -4px;
+        transition: all 0.3s ease-in-out;
+        width: 24px;
+    }
+
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}

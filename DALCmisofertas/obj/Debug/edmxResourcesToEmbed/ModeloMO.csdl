@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelMO" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADMINISTRADOR">
+    <Key>
+      <PropertyRef Name="RUN" />
+    </Key>
+    <Property Name="RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="P_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_M" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TIPO" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.PRODUCTO_CATEGORIA_FK" FromRole="CATEGORIA" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="COMUNA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="REGION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="REGION" Relationship="Self.COMUNA_REGION_FK" FromRole="COMUNA" ToRole="REGION" />
+    <NavigationProperty Name="CONSUMIDOR" Relationship="Self.CONSUMIDOR_COMUNA_FK" FromRole="COMUNA" ToRole="CONSUMIDOR" />
+    <NavigationProperty Name="SUCURSAL" Relationship="Self.SUCURSAL_COMUNA_FK" FromRole="COMUNA" ToRole="SUCURSAL" />
+  </EntityType>
+  <EntityType Name="CONSUMIDOR">
+    <Key>
+      <PropertyRef Name="RUN" />
+    </Key>
+    <Property Name="RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="P_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_M" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PUNTAJE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SUSCRITO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COMUNA_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="COMUNA" Relationship="Self.CONSUMIDOR_COMUNA_FK" FromRole="CONSUMIDOR" ToRole="COMUNA" />
+    <NavigationProperty Name="VALORACION" Relationship="Self.VALORACION_CONSUMIDOR_FK" FromRole="CONSUMIDOR" ToRole="VALORACION" />
+    <NavigationProperty Name="COMPORTAMIENTO_BI" Relationship="ModelMO.RUTCONSUMIDOR_FK" FromRole="CONSUMIDOR" ToRole="COMPORTAMIENTO_BI" />
+  </EntityType>
+  <EntityType Name="ENCARGADO">
+    <Key>
+      <PropertyRef Name="RUN" />
+    </Key>
+    <Property Name="RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="P_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_M" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="RETAIL_RUT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RETAIL" Relationship="Self.ENCARGADO_RETAIL_FK" FromRole="ENCARGADO" ToRole="RETAIL" />
+    <NavigationProperty Name="OFERTA" Relationship="Self.OFERTA_ENCARGADO_FK" FromRole="ENCARGADO" ToRole="OFERTA" />
+  </EntityType>
+  <EntityType Name="EVALUACION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_COMPRA" Type="DateTime" Nullable="false" />
+    <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="COMENTARIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VALORACION" Relationship="Self.VALORACION_EVALUACION_FK" FromRole="EVALUACION" ToRole="VALORACION" />
+  </EntityType>
+  <EntityType Name="GERENTE">
+    <Key>
+      <PropertyRef Name="RUN" />
+    </Key>
+    <Property Name="RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="P_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="S_NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_M" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARCA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.PRODUCTO_MARCA_FK" FromRole="MARCA" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="OFERTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="TITULO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" />
+    <Property Name="FECHA_TERMINO" Type="DateTime" Nullable="false" />
+    <Property Name="PRECIO_NORMAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRECIO_OFERTA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COMPRA_MIN" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="COMPRA_MAX" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ACTIVA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ENCARGADO_RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ENCARGADO" Relationship="Self.OFERTA_ENCARGADO_FK" FromRole="OFERTA" ToRole="ENCARGADO" />
+    <NavigationProperty Name="VALORACION" Relationship="Self.VALORACION_OFERTA_FK" FromRole="OFERTA" ToRole="VALORACION" />
+    <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PRODUCTO_SKU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PRODUCTO1" Relationship="ModelMO.OFERTA_ID_FK" FromRole="OFERTA" ToRole="PRODUCTO" />
+    <NavigationProperty Name="COMPORTAMIENTO_BI" Relationship="ModelMO.IDOFERTA_FK" FromRole="OFERTA" ToRole="COMPORTAMIENTO_BI" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="SKU" />
+    </Key>
+    <Property Name="SKU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CATEGORIA_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MARCA_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CATEGORIA" Relationship="Self.PRODUCTO_CATEGORIA_FK" FromRole="PRODUCTO" ToRole="CATEGORIA" />
+    <NavigationProperty Name="MARCA" Relationship="Self.PRODUCTO_MARCA_FK" FromRole="PRODUCTO" ToRole="MARCA" />
+    <NavigationProperty Name="OFERTA1" Relationship="ModelMO.OFERTA_ID_FK" FromRole="PRODUCTO" ToRole="OFERTA" />
+  </EntityType>
+  <EntityType Name="REGION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COMUNA" Relationship="Self.COMUNA_REGION_FK" FromRole="REGION" ToRole="COMUNA" />
+  </EntityType>
+  <EntityType Name="RETAIL">
+    <Key>
+      <PropertyRef Name="RUT" />
+    </Key>
+    <Property Name="RUT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RAZON_SOCIAL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ENCARGADO" Relationship="Self.ENCARGADO_RETAIL_FK" FromRole="RETAIL" ToRole="ENCARGADO" />
+    <NavigationProperty Name="SUCURSAL" Relationship="Self.SUCURSAL_RETAIL_FK" FromRole="RETAIL" ToRole="SUCURSAL" />
+  </EntityType>
+  <EntityType Name="SUCURSAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COMUNA_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="RETAIL_RUT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COMUNA" Relationship="Self.SUCURSAL_COMUNA_FK" FromRole="SUCURSAL" ToRole="COMUNA" />
+    <NavigationProperty Name="RETAIL" Relationship="Self.SUCURSAL_RETAIL_FK" FromRole="SUCURSAL" ToRole="RETAIL" />
+  </EntityType>
+  <EntityType Name="VALORACION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ESCALA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EVALUACION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CONSUMIDOR_RUN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OFERTA_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CONSUMIDOR" Relationship="Self.VALORACION_CONSUMIDOR_FK" FromRole="VALORACION" ToRole="CONSUMIDOR" />
+    <NavigationProperty Name="EVALUACION" Relationship="Self.VALORACION_EVALUACION_FK" FromRole="VALORACION" ToRole="EVALUACION" />
+    <NavigationProperty Name="OFERTA" Relationship="Self.VALORACION_OFERTA_FK" FromRole="VALORACION" ToRole="OFERTA" />
+  </EntityType>
+  <Association Name="PRODUCTO_CATEGORIA_FK">
+    <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="CATEGORIA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMUNA_REGION_FK">
+    <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMUNA">
+        <PropertyRef Name="REGION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CONSUMIDOR_COMUNA_FK">
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="1" />
+    <End Role="CONSUMIDOR" Type="Self.CONSUMIDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMUNA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONSUMIDOR">
+        <PropertyRef Name="COMUNA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SUCURSAL_COMUNA_FK">
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="1" />
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMUNA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SUCURSAL">
+        <PropertyRef Name="COMUNA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VALORACION_CONSUMIDOR_FK">
+    <End Role="CONSUMIDOR" Type="Self.CONSUMIDOR" Multiplicity="1" />
+    <End Role="VALORACION" Type="Self.VALORACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONSUMIDOR">
+        <PropertyRef Name="RUN" />
+      </Principal>
+      <Dependent Role="VALORACION">
+        <PropertyRef Name="CONSUMIDOR_RUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ENCARGADO_RETAIL_FK">
+    <End Role="RETAIL" Type="Self.RETAIL" Multiplicity="1" />
+    <End Role="ENCARGADO" Type="Self.ENCARGADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RETAIL">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="ENCARGADO">
+        <PropertyRef Name="RETAIL_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OFERTA_ENCARGADO_FK">
+    <End Role="ENCARGADO" Type="Self.ENCARGADO" Multiplicity="1" />
+    <End Role="OFERTA" Type="Self.OFERTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENCARGADO">
+        <PropertyRef Name="RUN" />
+      </Principal>
+      <Dependent Role="OFERTA">
+        <PropertyRef Name="ENCARGADO_RUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VALORACION_EVALUACION_FK">
+    <End Role="EVALUACION" Type="Self.EVALUACION" Multiplicity="1" />
+    <End Role="VALORACION" Type="Self.VALORACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVALUACION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VALORACION">
+        <PropertyRef Name="EVALUACION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRODUCTO_MARCA_FK">
+    <End Role="MARCA" Type="Self.MARCA" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="MARCA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VALORACION_OFERTA_FK">
+    <End Role="OFERTA" Type="Self.OFERTA" Multiplicity="1" />
+    <End Role="VALORACION" Type="Self.VALORACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OFERTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VALORACION">
+        <PropertyRef Name="OFERTA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SUCURSAL_RETAIL_FK">
+    <End Role="RETAIL" Type="Self.RETAIL" Multiplicity="1" />
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RETAIL">
+        <PropertyRef Name="RUT" />
+      </Principal>
+      <Dependent Role="SUCURSAL">
+        <PropertyRef Name="RETAIL_RUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EntitiesMO" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" />
+    <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" />
+    <EntitySet Name="COMUNA" EntityType="Self.COMUNA" />
+    <EntitySet Name="CONSUMIDOR" EntityType="Self.CONSUMIDOR" />
+    <EntitySet Name="ENCARGADO" EntityType="Self.ENCARGADO" />
+    <EntitySet Name="EVALUACION" EntityType="Self.EVALUACION" />
+    <EntitySet Name="GERENTE" EntityType="Self.GERENTE" />
+    <EntitySet Name="MARCA" EntityType="Self.MARCA" />
+    <EntitySet Name="OFERTA" EntityType="Self.OFERTA" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="REGION" EntityType="Self.REGION" />
+    <EntitySet Name="RETAIL" EntityType="Self.RETAIL" />
+    <EntitySet Name="SUCURSAL" EntityType="Self.SUCURSAL" />
+    <EntitySet Name="VALORACION" EntityType="Self.VALORACION" />
+    <AssociationSet Name="PRODUCTO_CATEGORIA_FK" Association="Self.PRODUCTO_CATEGORIA_FK">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="COMUNA_REGION_FK" Association="Self.COMUNA_REGION_FK">
+      <End Role="REGION" EntitySet="REGION" />
+      <End Role="COMUNA" EntitySet="COMUNA" />
+    </AssociationSet>
+    <AssociationSet Name="CONSUMIDOR_COMUNA_FK" Association="Self.CONSUMIDOR_COMUNA_FK">
+      <End Role="COMUNA" EntitySet="COMUNA" />
+      <End Role="CONSUMIDOR" EntitySet="CONSUMIDOR" />
+    </AssociationSet>
+    <AssociationSet Name="SUCURSAL_COMUNA_FK" Association="Self.SUCURSAL_COMUNA_FK">
+      <End Role="COMUNA" EntitySet="COMUNA" />
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+    </AssociationSet>
+    <AssociationSet Name="VALORACION_CONSUMIDOR_FK" Association="Self.VALORACION_CONSUMIDOR_FK">
+      <End Role="CONSUMIDOR" EntitySet="CONSUMIDOR" />
+      <End Role="VALORACION" EntitySet="VALORACION" />
+    </AssociationSet>
+    <AssociationSet Name="ENCARGADO_RETAIL_FK" Association="Self.ENCARGADO_RETAIL_FK">
+      <End Role="RETAIL" EntitySet="RETAIL" />
+      <End Role="ENCARGADO" EntitySet="ENCARGADO" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_ENCARGADO_FK" Association="Self.OFERTA_ENCARGADO_FK">
+      <End Role="ENCARGADO" EntitySet="ENCARGADO" />
+      <End Role="OFERTA" EntitySet="OFERTA" />
+    </AssociationSet>
+    <AssociationSet Name="VALORACION_EVALUACION_FK" Association="Self.VALORACION_EVALUACION_FK">
+      <End Role="EVALUACION" EntitySet="EVALUACION" />
+      <End Role="VALORACION" EntitySet="VALORACION" />
+    </AssociationSet>
+    <AssociationSet Name="PRODUCTO_MARCA_FK" Association="Self.PRODUCTO_MARCA_FK">
+      <End Role="MARCA" EntitySet="MARCA" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="VALORACION_OFERTA_FK" Association="Self.VALORACION_OFERTA_FK">
+      <End Role="OFERTA" EntitySet="OFERTA" />
+      <End Role="VALORACION" EntitySet="VALORACION" />
+    </AssociationSet>
+    <AssociationSet Name="SUCURSAL_RETAIL_FK" Association="Self.SUCURSAL_RETAIL_FK">
+      <End Role="RETAIL" EntitySet="RETAIL" />
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+    </AssociationSet>
+    <AssociationSet Name="OFERTA_ID_FK" Association="ModelMO.OFERTA_ID_FK">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="OFERTA" EntitySet="OFERTA" />
+    </AssociationSet>
+    <EntitySet Name="COMPORTAMIENTO_BI" EntityType="ModelMO.COMPORTAMIENTO_BI" />
+    <AssociationSet Name="IDOFERTA_FK" Association="ModelMO.IDOFERTA_FK">
+      <End Role="OFERTA" EntitySet="OFERTA" />
+      <End Role="COMPORTAMIENTO_BI" EntitySet="COMPORTAMIENTO_BI" />
+    </AssociationSet>
+    <AssociationSet Name="RUTCONSUMIDOR_FK" Association="ModelMO.RUTCONSUMIDOR_FK">
+      <End Role="CONSUMIDOR" EntitySet="CONSUMIDOR" />
+      <End Role="COMPORTAMIENTO_BI" EntitySet="COMPORTAMIENTO_BI" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="OFERTA_ID_FK">
+    <End Type="ModelMO.PRODUCTO" Role="PRODUCTO" Multiplicity="0..1" />
+    <End Type="ModelMO.OFERTA" Role="OFERTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="SKU" />
+      </Principal>
+      <Dependent Role="OFERTA">
+        <PropertyRef Name="PRODUCTO_SKU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="COMPORTAMIENTO_BI">
+    <Key>
+      <PropertyRef Name="IDBI" />
+    </Key>
+    <Property Name="IDBI" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_OFERTA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="RUT_CONSUMIDOR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CANT_ACCESOS" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="OFERTA" Relationship="ModelMO.IDOFERTA_FK" FromRole="COMPORTAMIENTO_BI" ToRole="OFERTA" />
+    <NavigationProperty Name="CONSUMIDOR" Relationship="ModelMO.RUTCONSUMIDOR_FK" FromRole="COMPORTAMIENTO_BI" ToRole="CONSUMIDOR" />
+  </EntityType>
+  <Association Name="IDOFERTA_FK">
+    <End Type="ModelMO.OFERTA" Role="OFERTA" Multiplicity="1" />
+    <End Type="ModelMO.COMPORTAMIENTO_BI" Role="COMPORTAMIENTO_BI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OFERTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPORTAMIENTO_BI">
+        <PropertyRef Name="ID_OFERTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RUTCONSUMIDOR_FK">
+    <End Type="ModelMO.CONSUMIDOR" Role="CONSUMIDOR" Multiplicity="1" />
+    <End Type="ModelMO.COMPORTAMIENTO_BI" Role="COMPORTAMIENTO_BI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONSUMIDOR">
+        <PropertyRef Name="RUN" />
+      </Principal>
+      <Dependent Role="COMPORTAMIENTO_BI">
+        <PropertyRef Name="RUT_CONSUMIDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
